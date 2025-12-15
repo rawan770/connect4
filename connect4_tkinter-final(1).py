@@ -86,10 +86,6 @@ def evaluate_window(window, piece):
         score += 5
     elif window.count(piece) == 2 and window.count(EMPTY) == 2:
         score += 2
-
-    # --- التعديل الجوهري هنا ---
-    # لو الخصم (اللاعب) عنده 3 قطع ومكان فاضي، دي مصيبة!
-    # نقصنا السكور بـ 100 عشان الـ AI يخاف ويجري يقفل الطريق
     if window.count(opp_piece) == 3 and window.count(EMPTY) == 1:
         score -= 100  
     
@@ -199,7 +195,7 @@ class Connect4GUI:
         for r in range(ROW_COUNT):
             for c in range(COLUMN_COUNT):
                 x0 = c*SQUARESIZE
-                y0 = (ROW_COUNT - 1 - r)*SQUARESIZE + SQUARESIZE # تعديل الإحداثيات لتناسب الـ GUI
+                y0 = (ROW_COUNT - 1 - r)*SQUARESIZE + SQUARESIZE 
                 x1 = x0 + SQUARESIZE
                 y1 = y0 + SQUARESIZE
                 self.canvas.create_rectangle(x0, y0, x1, y1, fill=BLUE, outline=BLACK)
@@ -283,3 +279,4 @@ if __name__ == "__main__":
     root.title("Connect 4 - Tkinter AI")
     gui = Connect4GUI(root)
     root.mainloop()
+
