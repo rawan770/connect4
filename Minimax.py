@@ -1,3 +1,8 @@
+import math
+import random
+import board_structure     
+import winning_move         
+import position_scoring     
 def minimax(board, depth, alpha, beta, maximizingPlayer):
     valid_locations = get_valid_locations(board)
     is_terminal = is_terminal_node(board)
@@ -41,4 +46,5 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
             beta = min(beta, value)
             if alpha >= beta:
                 break
+
         return best_col, value
