@@ -1,8 +1,6 @@
-import tkinter as tk
-from tkinter import messagebox
-import numpy as np
-import random
-import math
+import numpy as np  
+import math        
+import tkinter      
 
 # ----------------- Constants -----------------
 BLUE = "#0000FF"
