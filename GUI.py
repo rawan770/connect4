@@ -1,4 +1,15 @@
-class Connect4GUI:
+
+import tkinter as tk
+from tkinter import messagebox
+import numpy as np
+import sys
+import math
+import board_structure
+import winning_move
+import position_scoring
+import Minimax
+import Player_Clickand_AI_Moveclass Connect4GUI:
+
     def __init__(self, root):
         self.root = root
         self.board = create_board()
