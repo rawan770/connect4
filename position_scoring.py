@@ -1,5 +1,5 @@
 #member3
-
+import board_structure
 def evaluate_window(window, piece):
     score = 0
     opp_piece = PLAYER_PIECE if piece == AI_PIECE else AI_PIECE
