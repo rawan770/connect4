@@ -4,11 +4,13 @@ from tkinter import messagebox
 import numpy as np
 import sys
 import math
-import board_structure
+import random
+from board_structure import *
 import winning_move
 import position_scoring
 import Minimax
-import Player_Clickand_AI_Moveclass Connect4GUI:
+import Player_Clickand_AI_Move
+class Connect4GUI:
 
     def __init__(self, root):
         self.root = root
@@ -60,3 +62,4 @@ import Player_Clickand_AI_Moveclass Connect4GUI:
             fill=color
         )
         self.game_over = True
+
