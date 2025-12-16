@@ -1,8 +1,8 @@
 import math
 import random
-import board_structure     
-import winning_move         
-import position_scoring     
+from board_structure  import*   
+from  winning_move  import*       
+from position_scoring   import*  
 def minimax(board, depth, alpha, beta, maximizingPlayer):
     valid_locations = get_valid_locations(board)
     is_terminal = is_terminal_node(board)
