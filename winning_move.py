@@ -1,4 +1,4 @@
-import board_structure  
+from board_structure  import*
 def winning_move(board, piece):
     # Horizontal
     for c in range(COLUMN_COUNT-3):
