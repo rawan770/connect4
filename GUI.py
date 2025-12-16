@@ -25,7 +25,11 @@ class Connect4GUI:
 
         if self.turn == AI:
             self.root.after(500, self.ai_move)
+    def player_click(self, event):
+        Player_Clickand_AI_Move.player_click(self, event)
 
+    def ai_move(self):
+        Player_Clickand_AI_Move.ai_move(self)
     def draw_board(self):
         self.canvas.delete("all")
         for r in range(ROW_COUNT):
@@ -62,4 +66,7 @@ class Connect4GUI:
             fill=color
         )
         self.game_over = True
-
+if __name__ == "__main__":
+    root = tk.Tk()
+    game = Connect4GUI(root)
+    root.mainloop()        
