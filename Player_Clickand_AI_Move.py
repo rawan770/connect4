@@ -1,5 +1,8 @@
 import math
-
+import random
+import board_structure
+import Minimax              
+import winning_move         
 def player_click(self, event):
     if self.game_over or self.turn != PLAYER:
         return
@@ -45,3 +48,4 @@ def ai_move(self):
             self.turn = PLAYER
 
         self.draw_board()
+
