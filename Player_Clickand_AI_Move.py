@@ -1,7 +1,7 @@
 import math
 import random
-import board_structure
-import Minimax              
+from board_structure import *
+from  Minimax  import*            
 import winning_move         
 def player_click(self, event):
     if self.game_over or self.turn != PLAYER:
