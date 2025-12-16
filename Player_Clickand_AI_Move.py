@@ -1,8 +1,9 @@
 import math
 import random
 from board_structure import *
-from  Minimax  import*            
-import winning_move         
+from Minimax import *
+from winning_move import winning_move    # <-- ده السطر اللي كان عامل المشكلة وصلحناه
+
 def player_click(self, event):
     if self.game_over or self.turn != PLAYER:
         return
@@ -24,7 +25,6 @@ def player_click(self, event):
             self.draw_board()
             if not self.game_over:
                 self.root.after(500, self.ai_move)
-
 
 def ai_move(self):
     if self.game_over:
@@ -48,4 +48,3 @@ def ai_move(self):
             self.turn = PLAYER
 
         self.draw_board()
-
